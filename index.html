@@ -137,7 +137,8 @@
     <section>
       <h2>Language Profile</h2>
       <p>I am a native Mandarin Chinese speaker with a B.A. in Chinese Language and Literature from Harbin Normal University. My strongest professional value is not only producing Chinese text, but judging whether Chinese language sounds natural, contextually correct, emotionally plausible, and culturally grounded.</p>
-      <p>I am comfortable understanding Mandarin-region speech across China, including Southwestern Mandarin, Northwestern Mandarin, Central Plains Mandarin, and northern Mandarin varieties. I also have long-term interest in northern Chinese opera, local tunes, folk performance traditions, and the historical evolution of regional words and expressions.</p>
+      <p>I am comfortable understanding Mandarin-region speech across China, including Southwestern Mandarin, Northwestern Mandarin, Central Plains Mandarin, and northern Mandarin varieties. I pay attention to features such as retroflex variation, nasal finals, tone drift, local lexical choices, rhythm, and whether a pronunciation should be treated as a natural regional feature or a transcription error.</p>
+      <p>I also have long-term interest in northern Chinese opera, local tunes, folk performance traditions, and the historical evolution of regional words and expressions.</p>
       <div class="note">For xAI's AI Tutor - Chinese role, I focus on Chinese as living spoken language: rhythm, accent, tone, emotion, context, and human intent.</div>
     </section>
 
@@ -150,6 +151,48 @@
         <li>If a transcript is correct at the character level, is it still misleading in context?</li>
         <li>Does the model output sound fluent but emotionally hollow, culturally thin, or inconsistent across long context?</li>
       </ul>
+    </section>
+
+    <section>
+      <h2>Audio Data Quality Framework</h2>
+      <p>For Chinese audio work, I would evaluate each sample through a simple, repeatable framework.</p>
+      <table>
+        <thead>
+          <tr>
+            <th>Dimension</th>
+            <th>What I Check</th>
+            <th>Example Decision</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Verbatim accuracy</td>
+            <td>Exact words, names, mixed Chinese-English terms, omissions, and accidental normalization.</td>
+            <td>Preserve "GPT-4" or "Google Colab" as spoken unless guidelines require localization.</td>
+          </tr>
+          <tr>
+            <td>Pronunciation and accent</td>
+            <td>Whether a sound is clear, regional, slurred, misread, or likely to confuse ASR.</td>
+            <td>Mark a Mandarin-region accent feature as variation, not automatically as an error.</td>
+          </tr>
+          <tr>
+            <td>Prosody and rhythm</td>
+            <td>Pauses, emphasis, pacing, tone, emotional force, and whether speech sounds read or naturally spoken.</td>
+            <td>Note that a pause separates meaning rather than treating it as random silence.</td>
+          </tr>
+          <tr>
+            <td>Register and context</td>
+            <td>Whether the wording fits the speaker, topic, social setting, and communicative purpose.</td>
+            <td>Flag formal written phrasing if it sounds unnatural in a conversational clip.</td>
+          </tr>
+          <tr>
+            <td>Ambiguity handling</td>
+            <td>Unclear words, possible near-homophones, noisy segments, and confidence level.</td>
+            <td>Keep a defensible note when multiple transcriptions are possible.</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="note">This is not a claim of professional speech-science specialization. It is a practical quality-control method for making annotation decisions consistent, explainable, and useful to technical teams.</div>
     </section>
 
     <section>
@@ -211,12 +254,20 @@
         </thead>
         <tbody>
           <tr>
+            <td>Opening</td>
+            <td>Preserve "大家好，我是高一夫." Do not over-formalize it. This is clear conversational Mandarin.</td>
+          </tr>
+          <tr>
             <td>Academic background</td>
             <td><code>汉语言文学</code> should be transcribed as the academic major, not normalized to <code>中文专业</code>.</td>
           </tr>
           <tr>
             <td>Mixed-code terms</td>
             <td><code>AI</code>, <code>GPT-4</code>, and <code>Google Colab</code> should preserve product/model names unless a project guideline explicitly requires localization.</td>
+          </tr>
+          <tr>
+            <td>Work-process list</td>
+            <td>Preserve the spoken grouping around writing fiction, worldbuilding, organizing material, and comparing model outputs.</td>
           </tr>
           <tr>
             <td>Language-evaluation criteria</td>
@@ -232,7 +283,7 @@
 
     <section>
       <h2>Remote Work Readiness</h2>
-      <p>I currently work as a freelancer and am used to self-managed remote workflows: task-based delivery, asynchronous communication, documentation, cloud tools, and repeatable quality-review processes.</p>
+      <p>I currently work as a freelancer and am used to self-managed remote workflows: task-based delivery, asynchronous communication, documentation, cloud tools, and repeatable quality-review processes. I can commit at least 10 hours per week depending on project scope. My personal device is a Mac and is compatible with the role's remote-work requirements.</p>
     </section>
 
     <footer>
